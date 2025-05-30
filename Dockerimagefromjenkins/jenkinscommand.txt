@@ -1,0 +1,13 @@
+#/bin/bash
+git --version
+cd Jenkins
+pwd
+ls
+docker info
+docker --version
+docker build -t gnanajothit18/jenkinsubuntu:myimagefromjenkins .
+docker login -u gnanajothit18 -p <passwd>
+docker image ls
+docker login
+docker push gnanajothit18/jenkinsubuntu:myimagefromjenkins
+docker run -itd --name mycontainer -p 80:80 gnanajothit18/jenkinsubuntu:myimagefromjenkins
