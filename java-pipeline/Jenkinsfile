@@ -12,14 +12,18 @@ pipeline {
         stage('Compile') {
             steps {
                 echo 'Compiling Java code...'
-                sh 'javac HelloWorld.java'
+                dir ('java-pipeline') {
+                    sh 'javac HelloWorld.java"
+                }    
             }
         }
 
         stage('Run') {
             steps {
                 echo 'Running Java program...'
-                sh 'java HelloWorld'
+                  dir ('java-pipeline') {
+                    sh 'javac HelloWorld.java"
+                }  
             }
         }
     }
