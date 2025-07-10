@@ -13,7 +13,7 @@ pipeline {
             steps {
                 echo 'Compiling Java code...'
                 dir ('java-pipeline') {
-                    sh 'javac HelloWorld.java"
+                    sh 'javac HelloWorld.java'
                 }    
             }
         }
@@ -22,7 +22,7 @@ pipeline {
             steps {
                 echo 'Running Java program...'
                   dir ('java-pipeline') {
-                    sh 'javac HelloWorld.java"
+                    sh 'javac HelloWorld.java'
                 }  
             }
         }
