@@ -1,0 +1,27 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                // Checkout source code (if using Git)
+                echo 'Checking out code...'
+            }
+        }
+
+        stage('Compile') {
+            steps {
+                echo 'Compiling Java code...'
+                sh 'javac HelloWorld.java'
+            }
+        }
+
+        stage('Run') {
+            steps {
+                echo 'Running Java program...'
+                sh 'java HelloWorld'
+            }
+        }
+    }
+}
+
